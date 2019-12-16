@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "nextjs-projects"
+  },
+  "targets": {
+    "nextjs-projects": {
+      "hosting": {
+        "staging": [
+          "staging-portfolio-nextjs"
+        ],
+        "production": [
+          "production-portfolio-nextjs"
+        ]
+      }
+    }
+  }
+}
