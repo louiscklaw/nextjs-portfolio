@@ -1,13 +1,26 @@
 {
-  "hosting": {
-    "public": "dist/public",
-    "rewrites": [
-      {
-        "source": "**/**",
-        "function": "next"
-      }
-    ]
-  },
+  "hosting": [
+    {
+      "target": "staging",
+      "public": "dist/public",
+      "rewrites": [
+        {
+          "source": "**/**",
+          "function": "next"
+        }
+      ]
+    },
+    {
+      "target":"production",
+      "public": "dist/public",
+      "rewrites": [
+        {
+          "source": "**/**",
+          "function": "next"
+        }
+      ]
+    }
+  ],
   "functions": {
     "source": "dist/functions"
   }
