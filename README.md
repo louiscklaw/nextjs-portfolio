@@ -16,3 +16,10 @@ yarn
 
 ### to test
 `yarn test`
+
+### travis
+- develop
+[![Build Status](https://travis-ci.org/louiscklaw/nextjs-portfolio.svg?branch=develop)](https://travis-ci.org/louiscklaw/nextjs-portfolio)
+
+- master(production)
+[![Build Status](https://travis-ci.org/louiscklaw/nextjs-portfolio.svg?branch=master)](https://travis-ci.org/louiscklaw/nextjs-portfolio)
