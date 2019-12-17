@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
-firebase deploy
+
+firebase deploy --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
+firebase deploy --only functions:staging_next --token $FIREBASE_TOKEN --non-interactive
 
 cd $TRAVIS_BUILD_DIR/_ref/travis-broadcast
 pipenv sync
