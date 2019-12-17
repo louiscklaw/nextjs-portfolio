@@ -6,7 +6,7 @@
       "rewrites": [
         {
           "source": "**/**",
-          "function": "next"
+          "function": "staging_next"
         }
       ]
     },
@@ -16,7 +16,7 @@
       "rewrites": [
         {
           "source": "**/**",
-          "function": "next"
+          "function": "production_next"
         }
       ]
     }
