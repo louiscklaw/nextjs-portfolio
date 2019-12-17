@@ -35,12 +35,10 @@ deploy:
 #       all_branches: true
 #       condition: $TRAVIS_BRANCH = "master"
 
-
-# cache:
-#     npm: true
-#     directories:
-#         - node_modules
-#         - functions/node_modules
+cache:
+    npm: true
+    directories:
+        - node_modules
 
 notifications:
   slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
