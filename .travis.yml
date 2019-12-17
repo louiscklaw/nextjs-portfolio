@@ -14,16 +14,16 @@ install:
 script:
   - cd $TRAVIS_BUILD_DIR
   - yarn test
-  - yarn build
 
 before_deploy:
+  - yarn predeploy
   - npm install -g firebase-tools firebase-functions firebase-admin
 
 deploy:
   # staging deploy
   - provider: script
     skip_cleanup: true
-    script: firebase deploy -f --project nextjs-projects --token $FIREBASE_DEV_TOKEN --non-interactive
+    script: firebase deploy -f --project nextjs-projects --token $FIREBASE_TOKEN --non-interactive
     # on:
     #   all_branches: true
     #   condition: $TRAVIS_BRANCH = "develop"
