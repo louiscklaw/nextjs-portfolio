@@ -21,9 +21,7 @@
     "deploy_production": "firebase deploy --only hosting:production",
     "test": "jest",
     "build_production": "cross-env NODE_ENV=production npm run predeploy",
-    "serve_production": "cross-env NODE_ENV=production firebase serve",
-    "build_staging": "cross-env NODE_ENV=staging npm run predeploy",
-    "serve_staging": "cross-env NODE_ENV=staging firebase serve"
+    "build_staging": "cross-env NODE_ENV=staging npm run predeploy"
   },
   "dependencies": {
     "enzyme": "^3.10.0",
