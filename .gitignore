@@ -1,4 +1,6 @@
 
+src/app/__tests__/__snapshots__
+
 **/.env
 **/*.log
 node_modules
