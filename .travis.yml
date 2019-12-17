@@ -23,9 +23,8 @@ deploy:
   # staging deploy
   - provider: script
     skip_cleanup: true
-    script:
-      - firebase deploy -f --project nextjs-projects --only hosting:staging --token $FIREBASE_TOKEN --non-interactive
-      - firebase deploy -f --project nextjs-projects --only functions:staging --token $FIREBASE_TOKEN --non-interactive
+    script: bash scripts/deploy.sh
+
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH = "test/travis-upload"
