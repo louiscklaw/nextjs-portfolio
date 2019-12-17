@@ -8,7 +8,7 @@ function IndexPage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <p>Hello World!</p>
+      <p>Hello World!1</p>
     </div>
   )
 }
