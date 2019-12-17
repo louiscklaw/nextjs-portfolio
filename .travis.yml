@@ -24,9 +24,9 @@ deploy:
   - provider: script
     skip_cleanup: true
     script: firebase deploy -f --project nextjs-projects --token $FIREBASE_TOKEN --non-interactive
-    # on:
-    #   all_branches: true
-    #   condition: $TRAVIS_BRANCH = "develop"
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH = "test/travis-upload"
 #   # production deploy
 #   - provider: script
 #     skip_cleanup: true
