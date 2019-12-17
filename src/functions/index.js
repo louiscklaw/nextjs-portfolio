@@ -17,7 +17,7 @@ exports.production_next = functions.https.onRequest((req, res) => {
 })
 
 var staging_app = next({ dev: false, conf: { distDir: staging_distDir } })
-var staging_handle = production_app.getRequestHandler()
+var staging_handle = staging_app.getRequestHandler()
 exports.staging_next = functions.https.onRequest((req, res) => {
   console.log('File: ' + req.originalUrl) // log the page.js file that is being requested
   return staging_app.prepare().then(() => staging_handle(req, res))
