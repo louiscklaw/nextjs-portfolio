@@ -15,10 +15,10 @@ install:
 script:
   - cd $TRAVIS_BUILD_DIR
   - yarn test -u
+  - yarn build-all
 
 before_deploy:
   - cd $TRAVIS_BUILD_DIR
-  - yarn predeploy
   - npm install -g firebase-tools firebase-functions firebase-admin
 
 deploy:
