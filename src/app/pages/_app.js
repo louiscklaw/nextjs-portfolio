@@ -2,6 +2,7 @@ import React from 'react'
 import App from 'next/app'
 import Router from 'next/router'
 import { initGA, logPageView } from '../utils/analytics'
+import { check_dev } from '../utils/common'
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -15,9 +16,17 @@ export default class MyApp extends App {
   }
 
   componentDidMount() {
-    initGA()
-    logPageView()
-    Router.router.events.on('routeChangeComplete', logPageView)
+    // IDEA: the window.location need to run from client side
+    var check_localhost = window.location.href.search('localhost') > -1
+    if (check_localhost||check_dev){
+      console.log('skip GA log as not in production')
+    }else{
+      initGA()
+      logPageView()
+      Router.router.events.on('routeChangeComplete', logPageView)
+
+    }
+
   }
 
   render() {
