@@ -20,10 +20,8 @@
     "deploy_staging": "firebase deploy --only hosting:staging",
     "deploy_production": "firebase deploy --only hosting:production",
     "test": "jest",
-
     "build_production": "cross-env NODE_ENV=production npm run predeploy",
     "serve_production": "cross-env NODE_ENV=production firebase serve",
-
     "build_staging": "cross-env NODE_ENV=staging npm run predeploy",
     "serve_staging": "cross-env NODE_ENV=staging firebase serve"
   },
@@ -31,10 +29,10 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "firebase-admin": "^8.2.0",
-    "firebase-functions": "^2.1.0",
+    "firebase-functions": "^3.3.0",
     "grpc": "^1.22.2",
     "jest": "^24.9.0",
-    "next": "latest",
+    "next": "^9.1.6",
     "next-offline": "4.0.6",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
