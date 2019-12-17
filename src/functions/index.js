@@ -8,6 +8,7 @@ var production_distDir = `${path.relative(process.cwd(), __dirname)}/next`
 var staging_distDir = `${path.relative(process.cwd(), __dirname)}/next-staging`
 var result_distDir = dev ? staging_distDir: production_distDir
 
+// NOTE: the dev: false is related to https://github.com/zeit/next.js/issues/8893
 var app = next({
   dev: false,
   conf: { distDir: result_distDir },
