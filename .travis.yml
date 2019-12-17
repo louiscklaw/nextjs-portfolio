@@ -1,0 +1,46 @@
+#.travis.yml
+sudo: false
+
+dist: trusty
+
+language: node_js
+
+node_js:
+  - 8
+
+install:
+  - yarn install
+
+script:
+  - cd $TRAVIS_BUILD_DIR
+  - yarn test
+  - yarn build
+
+before_deploy:
+  - npm install -g firebase-tools firebase-functions firebase-admin
+
+deploy:
+  # staging deploy
+  - provider: script
+    skip_cleanup: true
+    script: firebase deploy -f --project nextjs-projects --token $FIREBASE_DEV_TOKEN --non-interactive
+    # on:
+    #   all_branches: true
+    #   condition: $TRAVIS_BRANCH = "develop"
+#   # production deploy
+#   - provider: script
+#     skip_cleanup: true
+#     script: firebase deploy --project $FIREBASE_PROJECT --token $FIREBASE_TOKEN --non-interactive
+#     on:
+#       all_branches: true
+#       condition: $TRAVIS_BRANCH = "master"
+
+
+# cache:
+#     npm: true
+#     directories:
+#         - node_modules
+#         - functions/node_modules
+
+notifications:
+  slack: louislabs:x4D51HjnR30LGpqZXrdbqUgB
