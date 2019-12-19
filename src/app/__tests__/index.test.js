@@ -14,7 +14,7 @@ describe('With Enzyme', () => {
   it('App shows "Hello world!"', () => {
     const app = shallow(<App />)
 
-    expect(app.find('p').text()).toEqual('Hello World!update')
+    expect(app.find('p').text()).toEqual('Hello World! update content')
   })
 })
 
