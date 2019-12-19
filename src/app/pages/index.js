@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+import Link from 'next/link'
+
 function IndexPage() {
 
   return (
@@ -9,7 +11,13 @@ function IndexPage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <p>Hello World! update content</p>
+      <ul>
+        <li>
+          <Link href="/about">
+            <a>About Us</a>
+          </Link>
+        </li>
+      </ul>
     </div>
   )
 }
