@@ -12,7 +12,7 @@ def slack_message(message, channel):
   client = slack.WebClient(token=SLACK_TOKEN)
   response = client.chat_postMessage(
       channel=channel,
-      text=message,
+      text=message+'\nhttps://www.example.com',
       username='TravisMergerBot',
       icon_url=':sob:'
       )

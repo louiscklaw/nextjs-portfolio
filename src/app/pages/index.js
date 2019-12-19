@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 function IndexPage() {
+
   return (
     <div>
       <Head>
@@ -8,7 +9,7 @@ function IndexPage() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <p>Hello World!production</p>
+      <p>Hello World!update</p>
     </div>
   )
 }
