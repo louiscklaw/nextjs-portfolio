@@ -25,6 +25,10 @@
     "build-all": "yarn build_staging && yarn build_production"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "firebase-admin": "^8.2.0",
