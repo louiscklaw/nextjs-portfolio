@@ -12,9 +12,25 @@ function IndexPage() {
       </Head>
       <ul>
         <li>
-          <Link href="/about">
+          <Link href="/About">
             <a>about</a>
           </Link>
+          <Link href="/BuildStatus">
+            <a>BuildStatus</a>
+          </Link>
+          <Link href="/Credits">
+            <a>Credits</a>
+          </Link>
+          <Link href="/Helloworld">
+            <a>Helloworld</a>
+          </Link>
+          <Link href="/Logs">
+            <a>Logs</a>
+          </Link>
+          <Link href="/Projects">
+            <a>Projects</a>
+          </Link>
+
         </li>
 
       </ul>
