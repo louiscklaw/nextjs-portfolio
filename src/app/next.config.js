@@ -1,6 +1,8 @@
 const withOffline = require('next-offline')
+const withMDX = require('@next/mdx')()
 
-const withPlugins = require('next-compose-plugins');
+const withPlugins = require('next-compose-plugins')
+
 
 var production_distDir = '../../dist/functions/next'
 var staging_distDir = '../../dist/functions/next-staging'
@@ -41,7 +43,8 @@ const nextConfig = {
 // })
 module.exports = withPlugins(
   [
-    [withOffline,
+    [
+      withOffline,
       {
         distDir: result_distDir,
         workboxOpts: {
@@ -57,6 +60,12 @@ module.exports = withPlugins(
             ]
           },
         },
+      }
+    ],
+    [
+      withMDX,
+      {
+        pageExtensions: ['js', 'jsx', 'md', 'mdx']
       }
     ]
   ], nextConfig
