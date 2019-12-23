@@ -14,7 +14,7 @@ install:
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - yarn test -u
+  # - yarn test -u
   - yarn build-all
 
 before_deploy:
