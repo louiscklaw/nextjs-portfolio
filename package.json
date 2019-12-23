@@ -22,7 +22,7 @@
     "test": "jest",
     "build-production": "cross-env NODE_ENV=production npm run predeploy",
     "build-staging": "cross-env NODE_ENV=staging npm run predeploy",
-    "build-all": "yarn build_staging && yarn build_production"
+    "build-all": "yarn build-staging && yarn build-production"
   },
   "dependencies": {
     "@babel/preset-env": "^7.7.7",
